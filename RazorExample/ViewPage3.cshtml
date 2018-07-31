@@ -1,0 +1,75 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @{ List<StudentInfo> li = new List<StudentInfo>
+        {
+new StudentInfo {Rollno=1,Name="Meg",Course="MSC",Branch="CS",Semester=4,Aggrregate=97,grade='A' },
+new StudentInfo {Rollno=2,Name="Megh",Course="MSC",Branch="MS",Semester=4,Aggrregate=47,grade='B' },
+new StudentInfo {Rollno=3,Name="Megha",Course="MSC",Branch="Architecture",Semester=4,Aggrregate=67,grade='C' },
+new StudentInfo {Rollno=4,Name="Meghan",Course="MSC",Branch="CS",Semester=4,Aggrregate=77,grade='B' }
+        };
+        }
+    </div>
+    <div>
+        <table border="1" style="background-color:aquamarine">
+            <tr>
+                <th>
+                    Rollno
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Course
+                </th>
+                <th>Branch</th>
+                <th>
+                    Semester
+                </th>
+                <th>
+                    Aggregate
+                </th>
+                <th>
+                    Grade
+                </th>
+            </tr>
+            @foreach (var s in li)
+            {
+                <tr>
+                    <td>
+                        @s.Rollno
+                    </td>
+                    <td>
+                        @s.Name
+                    </td>
+                    <td>
+                        @s.Course
+                    </td>
+                    <td>
+                        @s.Branch
+                    </td>
+                    <td>
+                        @s.Semester
+                    </td>
+                    <td>
+                        @s.Aggrregate
+                    </td>
+                    <td>
+                        @s.grade
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

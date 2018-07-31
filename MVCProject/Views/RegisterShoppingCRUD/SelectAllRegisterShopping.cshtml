@@ -1,0 +1,42 @@
+﻿@model IEnumerable<MVCProject.Models.RegisterShopping>
+@{
+    ViewBag.Title = "SelectAllRegisterShopping";
+}
+
+<h2>SelectAllRegisterShopping</h2>
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>
+            Gender
+        </th>
+        <th>
+            Membership
+        </th>
+        <th>Shopping Preference</th>
+        <th>
+            COD
+        </th>
+        <th>Password</th>
+    </tr>
+    @foreach(var x in Model)
+    {
+        <tr>
+            <td>
+                @x.Id
+            </td>
+            <td>@x.Name</td>
+            <td>@x.Gender</td>
+            <td>@x.Membership</td>
+            <td>@x.ShoppingPreference</td>
+            <td>@x.COD</td>
+            <td>@x.Password</td>
+        </tr>
+    }
+</table>
+@Html.ActionLink("Insert New", "InsertRegisterShopping")
+<br />
+
+@Html.ActionLink("select Id", "SelectById")
